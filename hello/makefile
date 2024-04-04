@@ -1,8 +1,12 @@
 #Java
-.PHONY: clean
+.PHONY: clean run
 
-Hello.class:
+#runs and compiles as it's demo code
+run: Hello.class
+	java Hello
+
+Hello.class: Hello.java
 	javac Hello.java
-	
+
 clean:
 	rm Hello.class 
